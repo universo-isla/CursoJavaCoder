@@ -1,0 +1,33 @@
+.navbar-cont { 
+    width: 100%;    
+    padding-top: 0;
+    @extend %flextend;
+    background-color: none;
+    font-family: $tipo-amantes3;
+    text-decoration: none;
+    padding-left: 10%;
+
+    li {
+        list-style-type: none;
+    
+        a {
+            color: $verde-amantes; 
+            display: block;
+            
+        }
+        .nav-link-own {
+            display: block;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+        .nav-link-own:hover {
+            color: #9c987e;
+            text-decoration: underline;
+          }
+
+    
+        .logo_s {
+            display: none;
+        }
+    }
+}

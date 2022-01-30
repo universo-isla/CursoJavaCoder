@@ -1,0 +1,13 @@
+.col3_1 {
+    grid-area: 1 / 5 / 3 / 6;
+    background-image: url(../multimd/helecho_col3_v1.png);
+    width: 100%;
+}
+.col3_2 {
+    grid-area: 3 / 5 / 5 / 6;
+    background-image: url("../multimd/col3_2_v5.png");
+}
+.col3_3 {
+    grid-area: 5 / 5 / 6 / 6;
+    background-color: #7CC6A2;
+}
