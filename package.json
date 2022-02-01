@@ -297,5 +297,13 @@
     "yargs-parser": "^20.2.9",
     "yallist": "^4.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/universo-isla/CursoJavaCoder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/universo-isla/CursoJavaCoder/issues"
+  },
+  "homepage": "https://github.com/universo-isla/CursoJavaCoder#readme",
   "description": ""
 }

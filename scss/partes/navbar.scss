@@ -1,14 +1,30 @@
-.navbar-cont { 
+.navBarCont { 
     width: 100%;    
     padding-top: 0;
+    position: fixed;
     @extend %flextend;
-    background-color: none;
+    background-color: #C0D79F;
     font-family: $tipo-amantes3;
     text-decoration: none;
-    padding-left: 10%;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: center;
+
+    .navbar {
+        width: 80%;
+        padding-left: auto;
+        padding-right: auto;
+
+        .navbar-brand {
+            padding-right: 3%;
+            
+        }
+    }
+    
 
     li {
         list-style-type: none;
+
     
         a {
             color: $verde-amantes; 
@@ -24,7 +40,6 @@
             color: #9c987e;
             text-decoration: underline;
           }
-
     
         .logo_s {
             display: none;

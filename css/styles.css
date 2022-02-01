@@ -1,27 +1,36 @@
-.navbar-cont {
+.navBarCont, .contenedor_nstrs .nosotros {
   display: flex;
   flex-wrap: wrap; }
 
-.navbar-cont {
+.navBarCont {
   width: 100%;
   padding-top: 0;
-  background-color: none;
+  position: fixed;
+  background-color: #C0D79F;
   font-family: "Quicksand", sans-serif;
   text-decoration: none;
-  padding-left: 10%; }
-  .navbar-cont li {
+  padding-top: 0;
+  padding-bottom: 0;
+  justify-content: center; }
+  .navBarCont .navbar {
+    width: 80%;
+    padding-left: auto;
+    padding-right: auto; }
+    .navBarCont .navbar .navbar-brand {
+      padding-right: 3%; }
+  .navBarCont li {
     list-style-type: none; }
-    .navbar-cont li a {
+    .navBarCont li a {
       color: #2B2E18;
       display: block; }
-    .navbar-cont li .nav-link-own {
+    .navBarCont li .nav-link-own {
       display: block;
       text-decoration: none;
       padding: 0.5rem 1rem; }
-    .navbar-cont li .nav-link-own:hover {
+    .navBarCont li .nav-link-own:hover {
       color: #9c987e;
       text-decoration: underline; }
-    .navbar-cont li .logo_s {
+    .navBarCont li .logo_s {
       display: none; }
 
 * {
@@ -34,8 +43,8 @@
   height: 700px; }
   .bkgrnd .contenedor {
     width: 80%;
-    height: 500px;
-    padding-top: 80px;
+    height: 600px;
+    padding-top: 100px;
     margin-left: 8%;
     margin-right: 8%;
     display: grid;
@@ -58,7 +67,7 @@
     font-family: "Josefin Slab", serif;
     color: #6a713b;
     font-size: 2.5rem;
-    padding-top: 42%;
+    padding-top: 38%;
     padding-left: 8%; }
   .col2_1 p {
     font-family: "Josefin Slab", serif;
@@ -66,7 +75,8 @@
     color: #7c7552;
     padding-left: 15%;
     padding-right: 8%;
-    margin-top: 5%; }
+    margin-top: 5%;
+    line-height: 120%; }
 
 .col2_2 {
   grid-area: 4 / 3 / 6 / 5;
@@ -85,5 +95,48 @@
 .col3_3 {
   grid-area: 5 / 5 / 6 / 6;
   background-color: #7CC6A2; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.contenedor_nstrs {
+  width: 80%;
+  height: 600px;
+  padding-top: 100px;
+  margin-left: 8%;
+  margin-right: 8%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; }
+  .contenedor_nstrs .nosotros {
+    margin-bottom: 2em;
+    margin-top: 1em; }
+    .contenedor_nstrs .nosotros .imgn_nstrs {
+      flex: 0 0 41.6666666667%;
+      max-width: 41.6666666667%; }
+      .contenedor_nstrs .nosotros .imgn_nstrs img {
+        width: 100%; }
+    .contenedor_nstrs .nosotros .txt_nstrs {
+      flex: 0 0 41.6666666667%;
+      max-width: 41.6666666667%;
+      padding-left: 5%; }
+      .contenedor_nstrs .nosotros .txt_nstrs h1 {
+        display: block;
+        width: 100%;
+        font-family: "Josefin Slab", serif;
+        color: #6a713b;
+        font-size: 2.5rem; }
+      .contenedor_nstrs .nosotros .txt_nstrs h2 {
+        display: block;
+        font-family: "Josefin Slab", serif;
+        color: #6a713b;
+        font-size: 2rem;
+        font-size: 2rem; }
+      .contenedor_nstrs .nosotros .txt_nstrs p {
+        display: block;
+        font-size: 1em;
+        font-family: "Quicksand", sans-serif; }
 
 /*# sourceMappingURL=styles.css.map */
