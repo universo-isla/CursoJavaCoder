@@ -4,7 +4,7 @@
     
     margin: 0px;
     background-color: #eef3db;
-    height: 700px;
+    //height: 700px;
 
     .contenedor {
         
@@ -12,11 +12,11 @@
         height: 600px;
         padding-top: 100px;
         margin-left: 8%;
-        margin-right: 8%;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        margin-right: 8%; 
+       display: grid;
+       grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(5, 1fr);
         grid-column-gap: 0px;
-        grid-row-gap: 0px; 
+        grid-row-gap: 0px;  
     }
 }

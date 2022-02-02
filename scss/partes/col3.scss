@@ -9,5 +9,32 @@
 }
 .col3_3 {
     grid-area: 5 / 5 / 6 / 6;
-    background-color: #7CC6A2;
+    background-color: $verde-amantes;
+
+    .footer {
+        @extend %flextend;
+        justify-content: center;
+
+        h2{
+            font-family: $tipo-amantes3;
+            font-size: 1rem;
+            color: $fondo-amantes;
+            padding-left: 10px;
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .redes-container {
+            padding-left: 20px;
+            display: flex;
+
+            .red {
+                text-decoration: none;
+                padding-left: 10px;
+            }
+        }
+    }
+        
+
+
 }
