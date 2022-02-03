@@ -52,8 +52,9 @@ $orange: hsl(50,80%,50%);
 }
 
 .card {
-  color: inherit;
-  background-color: rgba($fondo-amantes, .5);
+  //color: inherit;
+  background-color: red;
+  // rgba($fondo-amantes, .5);
   border: 0ch;
   cursor: pointer;
   width: calc(33% - 2rem);

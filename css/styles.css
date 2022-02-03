@@ -188,8 +188,7 @@
     bottom: 0; }
 
 .card {
-  color: inherit;
-  background-color: rgba(215, 212, 195, 0.5);
+  background-color: red;
   border: 0ch;
   cursor: pointer;
   width: calc(33% - 2rem);
