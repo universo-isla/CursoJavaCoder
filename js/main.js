@@ -1,5 +1,6 @@
 let compras = [];
-let sumaEnvioLocal = 0;
+let suma= 0;
+
 
 const Plantas = [
     {id: 1, nombre: "Helecho azul", precio: 150},
@@ -45,9 +46,8 @@ function AgregarEnvio (){
     let cont = prompt("¿Elija el tipo de envío? \n CDMX y área metropolitana = L, Foráneo = F");
         if (cont == "L"){
             sumaEnvioLocal ();
-            //console.log('la suma total de su Carrito es $' + sumaEnvioLocal);
         }else{
-            sumaEnvioLocal();
+            sumaEnvioForaneo();
         }
 }
 
