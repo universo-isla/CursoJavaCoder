@@ -1,5 +1,7 @@
 let compras = [];
 let suma= 0;
+let costoEnvioForaneo = 0;
+let costoEnvioLocal = 0;
 
 
 const Plantas = [
@@ -52,7 +54,7 @@ function AgregarEnvio (){
 }
 
 function sumaEnvioForaneo() {
-    let costoEnvioForaneo = suma + 200;
+   let costoEnvioForaneo = suma + 200;
     console.log('La suma total de su Carrito es $' + costoEnvioForaneo);
     //this.suma = this.suma + 200;
   }
