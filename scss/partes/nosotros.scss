@@ -2,6 +2,7 @@
 .contenedor_nstrs {
     width: 80%;
     padding-top: 100px;
+    padding-bottom: 20px;
     margin-left: 8%;
     margin-right: 8%;
     grid-template-columns: repeat(5, 1fr);
@@ -12,10 +13,10 @@
 
     .nosotros {
         display: flex;
-        flex-flow: row wrap;
+        
         justify-content: center;
         margin-bottom: 2em;
-        margin-top: 1em;
+        //margin-top: 1em;
         
     
         .imgn_nstrs {

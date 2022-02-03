@@ -1,4 +1,5 @@
 let compras = [];
+let sumaEnvioLocal = 0;
 
 const Plantas = [
     {id: 1, nombre: "Helecho azul", precio: 150},
@@ -7,7 +8,7 @@ const Plantas = [
     {id: 4, nombre: "Uña de señorira", precio: 120},
     {id: 5, nombre: "Begonia Cruz de Hierro", precio: 120},
     {id: 6, nombre: "Peperomia", precio: 120},
-    {id: 7, nombre: "Sanseveira", precio: 120}
+    //{id: 7, nombre: "Sanseveira", precio: 120}
 ];
 
 //Función:

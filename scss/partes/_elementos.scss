@@ -26,6 +26,7 @@ $orange: hsl(50,80%,50%);
   flex-wrap: wrap;
   max-width: 80%;
   padding-top: 100px;
+  z-index: -20;
 }
 
 .heading {
@@ -52,8 +53,9 @@ $orange: hsl(50,80%,50%);
 }
 
 .card {
+  z-index: 1;
   //color: inherit;
-  background-color: red;
+  background-color: $bkgrd-amantes;
   // rgba($fondo-amantes, .5);
   border: 0ch;
   cursor: pointer;
@@ -94,10 +96,10 @@ $orange: hsl(50,80%,50%);
 
 .front {
   background-size: cover;
-  
   // background-blend-mode: overlay;
   padding: 2rem;
   font-family: $tipo-amantes3;
+  color: $fondo-amantes;
   font-size: 2rem;
   font-weight: 600;
   overflow: hidden;
@@ -110,13 +112,9 @@ $orange: hsl(50,80%,50%);
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, adjust-hue($primary, -20deg), $primary);
+    background: linear-gradient(135deg, adjust-hue($verde-amantes, -20deg), $verde-amantes);
     opacity: .25;
     z-index: -1;
-    h2 {
-       //color: $fondo-amantes;
-       
-    }
   }
   .card:hover & {
     transform: rotateY(180deg);
@@ -132,10 +130,7 @@ $orange: hsl(50,80%,50%);
   color: $fondo-amantes;
   transform: rotateY(-180deg);
   padding: 0 2em;
-    h2 {
-        font-family: $tipo-amantes2;
-        
-    }
+
   
   .button {
     background: linear-gradient(135deg, adjust-hue($primary, -20deg), $primary);

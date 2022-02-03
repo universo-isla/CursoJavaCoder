@@ -3,6 +3,7 @@
   flex-wrap: wrap; }
 
 .navBarCont {
+  z-index: 4;
   width: 100%;
   padding-top: 0;
   position: fixed;
@@ -118,6 +119,7 @@
 .contenedor_nstrs {
   width: 80%;
   padding-top: 100px;
+  padding-bottom: 20px;
   margin-left: 8%;
   margin-right: 8%;
   grid-template-columns: repeat(5, 1fr);
@@ -126,10 +128,8 @@
   grid-row-gap: 0px; }
   .contenedor_nstrs .nosotros {
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
-    margin-bottom: 2em;
-    margin-top: 1em; }
+    margin-bottom: 2em; }
     .contenedor_nstrs .nosotros .imgn_nstrs {
       max-width: 41.6666666667%; }
       .contenedor_nstrs .nosotros .imgn_nstrs img {
@@ -165,7 +165,8 @@
   align-items: center;
   flex-wrap: wrap;
   max-width: 80%;
-  padding-top: 100px; }
+  padding-top: 100px;
+  z-index: -20; }
 
 .heading {
   width: 100%;
@@ -188,7 +189,8 @@
     bottom: 0; }
 
 .card {
-  background-color: red;
+  z-index: 1;
+  background-color: #eef3db;
   border: 0ch;
   cursor: pointer;
   width: calc(33% - 2rem);
@@ -226,6 +228,7 @@
   background-size: cover;
   padding: 2rem;
   font-family: "Quicksand", sans-serif;
+  color: #D7D4C3;
   font-size: 2rem;
   font-weight: 600;
   overflow: hidden; }
@@ -237,7 +240,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #1a9be6, #1a57e6);
+    background: linear-gradient(135deg, #2e2a18, #2B2E18);
     opacity: .25;
     z-index: -1; }
   .card:hover .front {
@@ -251,8 +254,6 @@
   color: #D7D4C3;
   transform: rotateY(-180deg);
   padding: 0 2em; }
-  .back h2 {
-    font-family: "Josefin Slab", serif; }
   .back .button {
     background: linear-gradient(135deg, #1a9be6, #1a57e6); }
     .back .button:before {
