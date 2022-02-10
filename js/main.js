@@ -21,9 +21,8 @@ mostrarPlantas();
 
 function mostrarPlantas() {
     plantas.forEach( function (planta) {
-        console.log(planta.nombre);
+        //console.log(planta.nombre);
 
-        
         const divPlanta = document.createElement('div');
         divPlanta.classList.add('.cardPlanta');
         console.log(divPlanta);
@@ -36,6 +35,18 @@ function mostrarPlantas() {
 
         const nombrePlanta = document.createElement("h3");
         nombrePlanta.textContent = planta.nombre;
+
+        const btnComprar = document.createElement("button");
+        btnComprar.classList.add(".btn-comprar");
+
+        btnComprar.onclick = () => {
+            agregarACarrito(planta.id);
+        };
+
+        divPlanta.appendChild(imagenPlanta);
+        divPlanta.appendChild(nombrePlanta);
+        
+        contenedorPlantas.appendChild(divPlanta);
  
     })
 }

@@ -336,5 +336,40 @@
       border-radius: 10px;
       color: white;
       overflow: hidden; }
+    .containerPlantas .contenedorPlantas .btn-comprar {
+      transform: translateZ(40px);
+      cursor: pointer;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      font-weight: bold;
+      padding: .5em 1em;
+      border-radius: 100px;
+      font: inherit;
+      border: none;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: 300ms ease; }
+      .containerPlantas .contenedorPlantas .btn-comprar:before {
+        transition: 300ms ease;
+        position: absolute;
+        display: block;
+        content: '';
+        transform: translateZ(-40px);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        height: calc(100% - 20px);
+        width: calc(100% - 20px);
+        border-radius: 100px;
+        left: 10px;
+        top: 16px; }
+      .containerPlantas .contenedorPlantas .btn-comprar:hover {
+        transform: translateZ(55px); }
+        .containerPlantas .contenedorPlantas .btn-comprar:hover:before {
+          transform: translateZ(-55px); }
+      .containerPlantas .contenedorPlantas .btn-comprar:active {
+        transform: translateZ(20px); }
+        .containerPlantas .contenedorPlantas .btn-comprar:active:before {
+          transform: translateZ(-20px);
+          top: 12px; }
 
 /*# sourceMappingURL=styles.css.map */
