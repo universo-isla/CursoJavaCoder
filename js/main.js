@@ -1,27 +1,55 @@
-let compras = [];
+/* let compras = [];
 let suma= 0;
 let costoEnvioForaneo = 0;
-let costoEnvioLocal = 0;
+let costoEnvioLocal = 0; */
+
+const plantas = [
+    {id: 1, nombre: "Helecho azul", precio: 150, img: './multimd/helecho_azul.png'},
+    {id: 2, nombre: "Helecho Osaka", precio: 170, img: './multimd/helecho_osaka_ok.png'},
+    {id: 3, nombre: "Helecho Faurei", precio: 150, img: './multimd/helecho_fua.png'},
+    {id: 4, nombre: "Uña de señorira", precio: 120, img: './multimd/una_srita.png'},
+    {id: 5, nombre: "Begonia Cruz de Hierro", precio: 120, img: './multimd/begonia_cdh.png'},
+    {id: 6, nombre: "Peperomia", precio: 120, img: './multimd/peperomia.png'},
+    // {id: 7, nombre: "Sanseveira", precio: 120}
+]
+
+const contenedorPlantas = document.querySelector('contenedorPlantas');
+
+const arrayCarrito = [];
+
+mostrarPlantas();
+
+function mostrarPlantas() {
+    plantas.forEach( function (planta) {
+        console.log(planta.nombre);
+
+        
+        const divPlanta = document.createElement('div');
+        divPlanta.classList.add('.cardPlanta');
+        console.log(divPlanta);
+
+        const imagenPlanta = document.createElement('img');
+        imagenPlanta.classList.add('.imagenPlanta');
+        imagenPlanta.src = plantas.img;
+
+        console.log(imagenPlanta);
+
+        const nombrePlanta = document.createElement("h3");
+        nombrePlanta.textContent = planta.nombre;
+ 
+    })
+}
 
 
-const Plantas = [
-    {id: 1, nombre: "Helecho azul", precio: 150},
-    {id: 2, nombre: "Helecho Osaka", precio: 170},
-    {id: 3, nombre: "Helecho Faurei", precio: 150},
-    {id: 4, nombre: "Uña de señorira", precio: 120},
-    {id: 5, nombre: "Begonia Cruz de Hierro", precio: 120},
-    {id: 6, nombre: "Peperomia", precio: 120},
-    //{id: 7, nombre: "Sanseveira", precio: 120}
-];
 
 //Función:
-
+/* 
 console.log("Bienvenida a nuestro carrito de compras, selecciona de la lista los productos que quieres comprar:");
 agregarACarrito();
 
 function agregarACarrito() {
-    let selctPlanta = parseInt(prompt((JSON.stringify(Plantas)) + '\n Ingrese el ID de su producto:' ));
-    let AgregarPlanta = Plantas.find((el) => el.id == selctPlanta);
+    let selctPlanta = parseInt(prompt((JSON.stringify(plantas)) + '\n Ingrese el ID de su producto:' ));
+    let AgregarPlanta = plantas.find((el) => el.id == selctPlanta);
 
     compras.push(AgregarPlanta);
         console.log(compras);
@@ -39,7 +67,7 @@ function seguirCompra (){
 
 function actualizarCarrito() {
     console.log('cantidad de productos agregados ' + compras.length);
-    let suma = compras.reduce((acc, el) => acc + el.precio, 0);
+    suma = compras.reduce((acc, el) => acc + el.precio, 0);
     console.log('El subtotal de su Carrito es $' + suma);
     AgregarEnvio ();
 }
@@ -67,4 +95,4 @@ function sumaEnvioForaneo() {
 
 function cargarCompra(Plantas) {
     compra.push(Planta);
-  }
+  } */

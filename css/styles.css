@@ -40,7 +40,8 @@
 
 .bkgrnd {
   margin: 0px;
-  background-color: #eef3db; }
+  background-color: #eef3db;
+  height: 700px; }
   .bkgrnd .contenedor {
     width: 80%;
     height: 600px;
@@ -232,6 +233,10 @@
   font-size: 2rem;
   font-weight: 600;
   overflow: hidden; }
+  .front .imagenPlanta {
+    height: 200px;
+    object-fit: cover;
+    object-position: center; }
   .front:before {
     position: absolute;
     display: block;
@@ -306,5 +311,30 @@
     .button:active:before {
       transform: translateZ(-20px);
       top: 12px; }
+
+.containerPlantas {
+  margin: 0 auto;
+  max-width: 900px;
+  height: 700px;
+  background-color: aqua; }
+  .containerPlantas .contenedorPlantas {
+    display: grid;
+    gap: 1rem;
+    background-color: black;
+    height: 20px;
+    grid-template-columns: repeat(4, 1fr); }
+    .containerPlantas .contenedorPlantas img {
+      width: 100%; }
+    .containerPlantas .contenedorPlantas .imagenPlanta {
+      height: 200px;
+      object-fit: cover;
+      object-position: center; }
+    .containerPlantas .contenedorPlantas .cardPlanta {
+      margin-bottom: 2rem;
+      text-align: center;
+      border: 1px solid white;
+      border-radius: 10px;
+      color: white;
+      overflow: hidden; }
 
 /*# sourceMappingURL=styles.css.map */

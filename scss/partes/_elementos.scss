@@ -104,6 +104,12 @@ $orange: hsl(50,80%,50%);
   font-weight: 600;
   overflow: hidden;
   
+      .imagenPlanta {
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+      }
+  
   &:before {
     position: absolute;
     display: block;
@@ -153,7 +159,7 @@ $orange: hsl(50,80%,50%);
     
     &:before {
       box-shadow: 0 0 10px 10px rgba($secondary, 0.25);
-    background-color: rgba($secondary, 0.25);
+      background-color: rgba($secondary, 0.25);
     }
   }
   }
