@@ -1,25 +1,40 @@
 .containerPlantas{
+    
     margin: 0 auto;
     max-width: 900px;
-    height: 700px;
-    background-color: aqua;
+    //height: 700px;
+    //margin-bottom: 200px;
+    //background-color: aqua;
 
     .contenedorPlantas {
         //margin-top: 1rem;
+        padding-top: 100px;
         display: grid;
-        gap: 1rem;
-        background-color: black;
+        gap: 2rem;
         height: 20px;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        font-family: $tipo-amantes3;
         
         img {
             width: 100%;
         }
 
         .imagenPlanta {
-            height: 200px;
+            height: 150px;
             object-fit: cover;
             object-position: center;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            padding-top: .5rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            padding-top: .5rem;
+            text-align: center;
         }
 
         .cardPlanta {
@@ -31,55 +46,26 @@
             overflow: hidden;
         }
 
+
         .btn-comprar {
-            $height: 40px;
-            transform: translateZ($height);
-            cursor: pointer;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            font-weight: bold;
-            
-            padding: .5em 1em;
-            border-radius: 100px;
-            font: inherit;
+            font-family: $tipo-amantes3;
+            //color: $verde-amantes;
+            font-size: .8rem;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+            outline: none;
             border: none;
-            position: relative;
-              transform-style: preserve-3d;
-            transition: 300ms ease;
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
             
-            &:before {
-            transition: 300ms ease;
-              position: absolute;
-              display: block;
-              content: '';
-              transform: translateZ(-$height);
-              -webkit-backface-visibility: hidden;
-              backface-visibility: hidden;
-              height: calc(100% - 20px);
-              width: calc(100% - 20px);
-              border-radius: 100px;
-              left: 10px;
-              top: 16px;
-            }
-            
-            &:hover {
-              transform: translateZ($height + 15px);
-              
-              &:before {
-                transform: translateZ(-($height + 15px));
-              }
-            }
-            
-            &:active {
-              transform: translateZ($height/2);
-              
-              &:before {
-                transform: translateZ(-($height/2));
-                  top: 12px;
-              }
-            }
         }
         
+        .btn-comprar:hover {
+            background-color: aliceblue;
+        } 
 
     }
 }

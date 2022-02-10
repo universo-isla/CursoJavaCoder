@@ -36,7 +36,11 @@
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #eef3db; }
 
 .bkgrnd {
   margin: 0px;
@@ -53,6 +57,11 @@
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px; }
+
+.bkgrnd_otras {
+  margin: 0px;
+  background-color: #eef3db;
+  height: auto; }
 
 .col1 {
   grid-area: 1 / 1 / 6 / 3;
@@ -314,21 +323,28 @@
 
 .containerPlantas {
   margin: 0 auto;
-  max-width: 900px;
-  height: 700px;
-  background-color: aqua; }
+  max-width: 900px; }
   .containerPlantas .contenedorPlantas {
+    padding-top: 100px;
     display: grid;
-    gap: 1rem;
-    background-color: black;
+    gap: 2rem;
     height: 20px;
-    grid-template-columns: repeat(4, 1fr); }
+    grid-template-columns: repeat(3, 1fr);
+    font-family: "Quicksand", sans-serif; }
     .containerPlantas .contenedorPlantas img {
       width: 100%; }
     .containerPlantas .contenedorPlantas .imagenPlanta {
-      height: 200px;
+      height: 150px;
       object-fit: cover;
       object-position: center; }
+    .containerPlantas .contenedorPlantas h3 {
+      font-size: 1.3rem;
+      padding-top: .5rem;
+      text-align: center; }
+    .containerPlantas .contenedorPlantas h2 {
+      font-size: 1.4rem;
+      padding-top: .5rem;
+      text-align: center; }
     .containerPlantas .contenedorPlantas .cardPlanta {
       margin-bottom: 2rem;
       text-align: center;
@@ -337,39 +353,18 @@
       color: white;
       overflow: hidden; }
     .containerPlantas .contenedorPlantas .btn-comprar {
-      transform: translateZ(40px);
-      cursor: pointer;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      font-weight: bold;
-      padding: .5em 1em;
-      border-radius: 100px;
-      font: inherit;
+      font-family: "Quicksand", sans-serif;
+      font-size: .8rem;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+      outline: none;
       border: none;
-      position: relative;
-      transform-style: preserve-3d;
-      transition: 300ms ease; }
-      .containerPlantas .contenedorPlantas .btn-comprar:before {
-        transition: 300ms ease;
-        position: absolute;
-        display: block;
-        content: '';
-        transform: translateZ(-40px);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        height: calc(100% - 20px);
-        width: calc(100% - 20px);
-        border-radius: 100px;
-        left: 10px;
-        top: 16px; }
-      .containerPlantas .contenedorPlantas .btn-comprar:hover {
-        transform: translateZ(55px); }
-        .containerPlantas .contenedorPlantas .btn-comprar:hover:before {
-          transform: translateZ(-55px); }
-      .containerPlantas .contenedorPlantas .btn-comprar:active {
-        transform: translateZ(20px); }
-        .containerPlantas .contenedorPlantas .btn-comprar:active:before {
-          transform: translateZ(-20px);
-          top: 12px; }
+      cursor: pointer;
+      margin-left: auto;
+      margin-right: auto; }
+    .containerPlantas .contenedorPlantas .btn-comprar:hover {
+      background-color: aliceblue; }
 
 /*# sourceMappingURL=styles.css.map */

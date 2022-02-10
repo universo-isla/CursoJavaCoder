@@ -1,5 +1,9 @@
-* { margin: 0; padding: 0; } 
+* { margin: 0; padding: 0; box-sizing: border-box; } 
 
+body {
+    background-color: $bkgrd-amantes;
+
+}
 .bkgrnd {
     
     margin: 0px;
@@ -19,4 +23,11 @@
         grid-column-gap: 0px;
         grid-row-gap: 0px;  
     }
+}
+
+.bkgrnd_otras {
+    
+    margin: 0px;
+    background-color: $bkgrd-amantes;
+    height: auto;
 }
