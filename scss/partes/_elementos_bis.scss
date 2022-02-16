@@ -49,7 +49,6 @@
 
         .btn-comprar {
             font-family: $tipo-amantes3;
-            //color: $verde-amantes;
             font-size: .8rem;
             display: inline-block;
             padding: 0.5rem 1rem;
@@ -60,7 +59,6 @@
             cursor: pointer;
             margin-left: auto;
             margin-right: auto;
-            
         }
         
         .btn-comprar:hover {
@@ -68,4 +66,50 @@
         } 
 
     }
+}
+
+.containerCarrito {
+    margin: 0 auto;
+    max-width: 900px;
+    padding-top: 100px;
+        .carritoTitulo {
+            font-family: $tipo-amantes3;
+            font-size: 2rem;
+            color: $verde-amantes;
+        }
+        .carrito {
+            margin-left: .5rem;
+            font-family: $tipo-amantes3;
+            font-size: 1rem;
+            width: 50%;
+
+            td {
+                
+                border-bottom: 1px solid;
+                border-color: rgb(138, 156, 147);
+
+                .plantaTabla {
+                    margin-right: 2rem;
+                }
+                #btnQuitar {
+                    font-family: $tipo-amantes3;
+                    font-size: .8rem;
+                    background-color: coral;
+                    display: inline-block;
+                    padding: 0 0.4rem;
+                    margin: .5rem 0;
+                    border-radius: 8px;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    #btnQuitar:hover {
+                        background-color: rgb(248, 172, 144);
+                    } 
+
+                }
+            }
+        }
 }
