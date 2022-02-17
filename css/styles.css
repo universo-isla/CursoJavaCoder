@@ -385,7 +385,7 @@ body {
       border-color: #8a9c93; }
       .containerCarrito .carrito td .plantaTabla {
         margin-right: 2rem; }
-      .containerCarrito .carrito td #btnQuitar {
+      .containerCarrito .carrito td .btnQuitar {
         font-family: "Quicksand", sans-serif;
         font-size: .8rem;
         background-color: coral;
@@ -398,7 +398,7 @@ body {
         cursor: pointer;
         margin-left: auto;
         margin-right: auto; }
-        .containerCarrito .carrito td #btnQuitar #btnQuitar:hover {
+        .containerCarrito .carrito td .btnQuitar .btnQuitar:hover {
           background-color: #f8ac90; }
 
 /*# sourceMappingURL=styles.css.map */
