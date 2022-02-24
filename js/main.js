@@ -3,11 +3,13 @@ let suma= 0;
 let costoEnvioForaneo = 0;
 let costoEnvioLocal = 0; */
 
+
 let totalCompra = 0;
 
 const contenedorPlantas = document.querySelector('.contenedorPlantas');
 const carrito = document.querySelector('.carrito');
 const contadorCarrito = document.getElementById('contadorCarrito');
+const precioTotal = document.getElementById('precioTotal');
 
 const plantas = [
     {id: 1, nombre: "Helecho Azul", precio: 150, img: '../multimd/helecho_azul.png', cantidad:1},
@@ -21,6 +23,7 @@ const plantas = [
 
 arrayCarrito = [];
 mostrarPlantas();
+
 total =0;
 
 
@@ -81,30 +84,36 @@ function agregarACarrito(id){
     let productoRepetido = arrayCarrito.find(buscar => buscar.id == id)
         if(productoRepetido) {
             productoRepetido.cantidad = productoRepetido.cantidad + 1
-            
-            document.getElementById(`cantidad${productoRepetido.id}`).innerHTML = `<td id="cantidad${productoRepetido.id}">cant.: ${productoRepetido.cantidad}</td> ` //para modificar la línea de código con la cantidad
-            //se repite la línea de código que se va a amodificar, pero se cambia la variable por la que se está trabajando aquí (productoRepetido)
             productoRepetido.precio = productoRepetido.precio * productoRepetido.cantidad
-            document.getElementById(`precio${productoRepetido.id}`).innerText = `<td id="precio${productoRepetido.precio}">$: ${productoRepetido.precio}</td> `
+            
+            document.getElementById(`cantidad${productoRepetido.id}`).innerHTML = `<td id="cantidad${productoRepetido.id}">cant.: ${productoRepetido.cantidad}</td> `
+            document.getElementById(`precio${productoRepetido.id}`).innerHTML = `<td id="precio${productoRepetido.id}">$: ${productoRepetido.precio}</td> `
+             //para modificar la línea de código con la cantidad
+            //se repite la línea de código que se va a amodificar, pero se cambia la variable por la que se está trabajando aquí (productoRepetido)
+            /* productoRepetido.precio = productoRepetido.precio * productoRepetido.cantidad
+             */
 
             actualizarCarrito()
 
         }else{
+            
 
             let plantaAgregada = plantas.find( planta => planta.id == id )
             console.log(plantaAgregada);
             arrayCarrito.push(plantaAgregada);
+            Swal.fire(`Haz agregado ${plantaAgregada.nombre} al carrito`)
 
         // alert("Agregaste " + plantaAgregada.nombre + " a tu carrito");
         actualizarCarrito()
             
+
             let tr = document.createElement("tr")
             tr.className = "celdaCarrito"
             tr.innerHTML = `
                     <td class="plantaTabla">${plantaAgregada.nombre}</td>
-                    <td id="precio${plantaAgregada.precio}">$ ${plantaAgregada.precio}</td>
+                    <td id="precio${plantaAgregada.id}">$ ${plantaAgregada.precio}</td>
                     <td id="cantidad${plantaAgregada.id}">cant.: ${plantaAgregada.cantidad}</td>
-                    <td> <button id="btnQuitar${plantaAgregada.id}"> quitar </button> </td>          
+                    <button id="btnQuitar${plantaAgregada.id}"> quitar </button>         
                     `
             carrito.appendChild(tr)
 
@@ -119,9 +128,11 @@ function agregarACarrito(id){
                     actualizarCarrito()
 
                 }else{
-                    plantaAgregada.cantidad = plantaAgregada.cantidad + 1
+                    plantaAgregada.cantidad = plantaAgregada.cantidad - 1
+                    plantaAgregada.precio = plantaAgregada.precio * plantaAgregada.cantidad
             
                     document.getElementById(`cantidad${plantaAgregada.id}`).innerHTML = `<td id="cantidad${plantaAgregada.id}">cant.: ${plantaAgregada.cantidad}</td> ` 
+                    document.getElementById(`precio${plantaAgregada.id}`).innerHTML = `<td id="precio${plantaAgregada.id}">$: ${plantaAgregada.precio}</td> `
                     actualizarCarrito()
 
                 }
@@ -133,14 +144,17 @@ function agregarACarrito(id){
 }
 
 function actualizarCarrito (){
-    contadorCarrito.innerText = arrayCarrito.reduce((acc,el) => acc + el.cantidad, 0) //acumulador (acc) y elemento (el): actualiza, al recibir un elemento, el valor cantidad, 0 es para decir 0+1 y de ahí sigue sumando
-    totalCompra.innerText = arrayCarrito.reduce((acc, el) => acc + (el.precio * el.cantidad), 0)
+    //contadorCarrito.innerText = arrayCarrito.reduce((acc,el) => acc + el.cantidad, 0) //acumulador (acc) y elemento (el): actualiza, al recibir un elemento, el valor cantidad, 0 es para decir 0+1 y de ahí sigue sumando
+    //totalCompra.innerText = arrayCarrito.reduce((acc, el) => acc + (el.precio * el.cantidad), 0)
     console.log(arrayCarrito);
+
+    precioTotal.innerText = arrayCarrito.reduce((acc,el)=> acc + (el.precio * el.cantidad), 0)
 
     //Storage del carrito:
     const guardarCarrito = (clave, valor) =>{localStorage.setItem(clave,valor)}
     guardarCarrito("listaproductos", JSON.stringify(arrayCarrito));
     let almacenada = JSON.parse(localStorage.getItem("listaproductos"));
+
 }
 
 
