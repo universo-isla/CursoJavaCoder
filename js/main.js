@@ -11,23 +11,19 @@ const carrito = document.querySelector('.carrito');
 const contadorCarrito = document.getElementById('contadorCarrito');
 const precioTotal = document.getElementById('precioTotal');
 
-const plantas = [
-    {id: 1, nombre: "Helecho Azul", precio: 150, img: '../multimd/helecho_azul.png', cantidad:1},
-    {id: 2, nombre: "Helecho Osaka", precio: 170, img: '../multimd/helecho_osaka_ok.png', cantidad:1},
-    {id: 3, nombre: "Helecho Faurei", precio: 150, img: '../multimd/helecho_fua.png', cantidad:1},
-    {id: 4, nombre: "Uña de señorita", precio: 120, img: '../multimd/una_srita.png', cantidad:1},
-    {id: 5, nombre: "Begonia Cruz de Hierro", precio: 120, img: '../multimd/begonia_cdh.png', cantidad:1},
-    {id: 6, nombre: "Peperomia", precio: 120, img: '../multimd/peperomia.png', cantidad:1},
-    // {id: 7, nombre: "Sanseveira", precio: 120}
-]
 
 arrayCarrito = [];
-mostrarPlantas();
+mostrarPlantas([]);
 
-total =0;
+total = 0;
+
+const URL = "../js/plantas.json";
+fetch(URL)
+.then(resp => resp.json())
+.then(mostrarPlantas)
 
 
-function mostrarPlantas() {
+function mostrarPlantas(plantas) {
     plantas.forEach( function (planta) {
         //console.log(planta.nombre);
 
@@ -58,30 +54,15 @@ function mostrarPlantas() {
         contenedorPlantas.appendChild(divPlanta);
 
         btnComprar.onclick = () => {
-            agregarACarrito(planta.id);
+            agregarACarrito(planta);
         };
 
 
     })
 }
 
-
-/* function agregarACarrito(id){
-    const plantaAgregada = plantas.find( planta => planta.id == id )
-    alert("Agregaste " + plantaAgregada.nombre + " a tu carrito");
-    arrayCarrito.push(plantaAgregada);
-    console.log(arrayCarrito);
-
-    const divCarrito = document.createElement("div");
-        divCarrito.classList.add('.cardCarrito');
-
-    const nombreEnCarrito = document.createElement("h3");
-        nombreEnCarrito.textContent = plantaAgregda.nombre;
-    
-} */
-
-function agregarACarrito(id){
-    let productoRepetido = arrayCarrito.find(buscar => buscar.id == id)
+function agregarACarrito(planta){
+    let productoRepetido = arrayCarrito.find(buscar => buscar.id == planta.id)
         if(productoRepetido) {
             productoRepetido.cantidad = productoRepetido.cantidad + 1
             productoRepetido.precio = productoRepetido.precio * productoRepetido.cantidad
@@ -96,14 +77,12 @@ function agregarACarrito(id){
             actualizarCarrito()
 
         }else{
-            
 
-            let plantaAgregada = plantas.find( planta => planta.id == id )
+            let plantaAgregada = planta;
             console.log(plantaAgregada);
             arrayCarrito.push(plantaAgregada);
             Swal.fire(`Haz agregado ${plantaAgregada.nombre} al carrito`)
 
-        // alert("Agregaste " + plantaAgregada.nombre + " a tu carrito");
         actualizarCarrito()
             
 
@@ -148,7 +127,7 @@ function actualizarCarrito (){
     //totalCompra.innerText = arrayCarrito.reduce((acc, el) => acc + (el.precio * el.cantidad), 0)
     console.log(arrayCarrito);
 
-    precioTotal.innerText = arrayCarrito.reduce((acc,el)=> acc + (el.precio * el.cantidad), 0)
+    precioTotal.innerText = arrayCarrito.reduce((acc,el)=> acc + (el.precio), 0)
 
     //Storage del carrito:
     const guardarCarrito = (clave, valor) =>{localStorage.setItem(clave,valor)}
@@ -156,33 +135,3 @@ function actualizarCarrito (){
     let almacenada = JSON.parse(localStorage.getItem("listaproductos"));
 
 }
-
-
-
-
-   //console.log(arrayCarrito);   
-/*     function construirTabla(comprando) {
-        var tbl = document.getElementById("carrito");
-            var row = tbl.insertRow();
-    } */
-    
-    //alert(tbl);
-    
-    /* var cell1 = row.insertCell();
-    var cell2 = row.insertCell();
-    var cell3 = row.insertCell();
-    var cell4 = row.insertCell(); */
-
-/*     cell1.innerHTML = `<p>${plantaAgregar.nombre}</p> `
-    cell2.innerHTML = `<p>${plantaAgregar.precio}</p> `
-    cell1.innerHTML = `<button class="quitarDelCarrito"></button> ` */
-
-    
-/*     let div = document.createElement('div')
-    div.className = 'plantaEnCarrito'
-    div.innerHTML = `
-        <p>${plantaAgregar.nombre}</p>
-        <p>${plantaAgregar.precio}</p>
-        <button class="quitarDelCarrito"></button> `
-
-    carrito.appendChild(div); */

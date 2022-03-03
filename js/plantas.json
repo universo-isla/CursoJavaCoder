@@ -1,0 +1,9 @@
+[
+    {"id": 1, "nombre": "Helecho Azul", "precio": 150, "img": "../multimd/helecho_azul.png", "cantidad":1},
+    {"id": 2, "nombre": "Helecho Osaka", "precio": 170, "img": "../multimd/helecho_osaka_ok.png", "cantidad":1},
+    {"id": 3, "nombre": "Helecho Faurei", "precio": 150, "img": "../multimd/helecho_fua.png", "cantidad":1},
+    {"id": 4, "nombre": "Uña de señorita", "precio": 120, "img": "../multimd/una_srita.png", "cantidad":1},
+    {"id": 5, "nombre": "Begonia Cruz de Hierro", "precio": 120, "img": "../multimd/begonia_cdh.png", "cantidad":1},
+    {"id": 6, "nombre": "Peperomia", "precio": 120, "img": "../multimd/peperomia.png","cantidad":1}
+   
+]
